@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Welcome to Kame House</title>
+</header>
+
+<body>
+
+    <h1>Welcome to Kame House</h1>
+    <img src="https://depor.com/resizer/YERL6Afnj0c3q7koN-1a_cCUsCc=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/RDR642DKSZAOFHEPW3ZBOOLLLA.jpg">
+
+    <h2>En casa:</h2>
+    <ul>
+    {% for x in peopleAtHome %}
+        <li>{{ x.name }} ({{ x.id }})</li>
+    {% endfor %}
+    </ul>
+
+    <br>
+    <h2>De viaje:</h2>
+    <ul>
+        {% for x in peopleAway %}
+            <li>{{ x.name }} ({{ x.id }})</li>
+        {% endfor %}
+        </ul>
+    <br>
+
+    <br>
+    <br>
+    <h3>Inserte personajes así: ruta POST -> objeto: {"nombre":&ltnombre&gt, "enCasa":&lttrue|false&gt}</h3>
+    <h3>Actualice estado así: ruta PUT -> Parámetro: id, objeto: {"nombre":&ltnombre&gt, "enCasa":&lttrue|false&gt}</h3>
+    <h3>Elimine así: ruta DELETE -> Parámetro: id</h3>
+</body>
+</html>
