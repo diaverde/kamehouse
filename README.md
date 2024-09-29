@@ -1,2 +1,2 @@
 # Kamehouse
-## A project
+## A project using Django
