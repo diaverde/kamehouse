@@ -7,12 +7,12 @@ from django.views.decorators.csrf import csrf_protect
 from .models import People
 
 def index(request):
-  people = People.objects.all().values()
+  people = People.objects.all()
   template = loader.get_template('index.html')
   peopleAtHome = []
   peopleAway = []
   for person in people:
-    if person["isHere"]:
+    if person.isHere:
         peopleAtHome.append(person)
     else:
         peopleAway.append(person)
